@@ -203,9 +203,7 @@
      	}
    }
    next: // ...
-   ```
-
-
+   
    // 判断是否是新的盒子
    BOOL isNewBlock(int color){}
    ```

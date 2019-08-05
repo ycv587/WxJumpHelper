@@ -1,5 +1,7 @@
 # WxJumpHelper
 
+<br>
+
 ## 一、开发环境
 
 <br>
@@ -14,10 +16,10 @@
    打开adb文件夹，将此路径添加到环境变量中；
    手机使用数据线连接电脑，并打开USB调试；
    打开cmd窗口，输入`adb devices`查看设备是否已连接，如图：
-   ![tyt1](C:\Users\YANGCHEN\Documents\Typora\img\tyt1.png)
+   ![tyt1](https://github.com/ycv587/WxJumpHelper/blob/master/images/tyt1.png)
 4. EasyX安装
    双击打开安装文件，选择相应的VS版本即可，如图：
-   ![tyt3](C:\Users\YANGCHEN\Documents\Typora\img\tyt3.png)
+   ![tyt3](https://github.com/ycv587/WxJumpHelper/blob/master/images/tyt3.png)
 5. 在VS中新建项目
    vs2017 - 文件 - 新建 - 项目 - Win32控制台应用程序 - 空项目 - 完成
    解决方案资源管理器 - 源文件 - 新建项 - 新建main.cpp
@@ -48,7 +50,7 @@
    ```
 
    运行后打开项目路径检查是否存在screen.png，如图：
-   ![tyt2](C:\Users\YANGCHEN\Documents\Typora\img\tyt2.png)
+   ![tyt2](https://github.com/ycv587/WxJumpHelper/blob/master/images/tyt2.png)
 
 2. 模拟长按屏幕
 
@@ -102,7 +104,7 @@
    ```
 
    运行程序，检查窗体是否成功加载截图，如图：
-   ![tyt4](C:\Users\YANGCHEN\Documents\Typora\img\tyt4.png)
+   ![tyt4](https://github.com/ycv587/WxJumpHelper/blob/master/images/tyt4.png)
 
 3. 由于截图过大，且上下部分均不是游戏有效区域，故对图像进行裁剪，取得必须部分，经计算取得800*700的大小即可：
 
@@ -141,7 +143,7 @@
    ```
 
    运行程序，如下：
-   ![tyt5](C:\Users\YANGCHEN\Documents\Typora\img\tyt5.png)
+   ![tyt5](https://github.com/ycv587/WxJumpHelper/blob/master/images/tyt5.png)
 
 <br>
 
@@ -441,7 +443,7 @@
 
 2. 目标点的选定逻辑
    在定位时获取到了顶部坐标(xx1,yy1)，那么是否需要底部坐标，进而求中心点呢？这么做更精确，但是每次跳跃都会跳到中心，显然辅助被外挂检测机制检测到的概率更大，故选用下图所示逻辑计算跳点：
-   ![tyt7](C:\Users\YANGCHEN\Documents\Typora\img\tyt7.png)
+   ![tyt7](https://github.com/ycv587/WxJumpHelper/blob/master/images/tyt7.png)
    如图，以(x,y)作为方块顶点，各种模型的切点与切线均如图所示，以x和y增加部分偏移量而得出的目标点（绿线），对于小方块来说更靠近中间，但是大方块则基本不在中心，这样既考虑了小方块，又避免了外挂检测。**程序默认采用(x+10,y+95)进行跳点计算，可根据实际效果进行微调。**
 
 3. 距离的计算
@@ -564,7 +566,7 @@
 
 3. 极少数情况无法识别跳跃点
    在游戏中有一类极少遇到的情况，如下图：
-   ![tyt8](C:\Users\YANGCHEN\Documents\Typora\img\tyt8.png)
+   ![tyt8](https://github.com/ycv587/WxJumpHelper/blob/master/images/tyt8.png)
    如图，已跳过的方块的纵坐标小于待跳方块的纵坐标，所以会被先扫描到，对于这种情况，采用如下方案解决：先扫描角色，若角色x坐标小于400，则人物在左侧，那么人物左侧的像素就不必再被扫描，若人物在右侧，则人物右侧的内容也不必扫描。
 
 4. 反检测
@@ -734,7 +736,7 @@ BOOL isNewBlock(int color)
 4. 打开cmd窗口，输入`adb devices`检测是否已连接
 5. 手机打开微信跳一跳
 6. 运行程序：如下图
-   ![tyt9](C:\Users\YANGCHEN\Documents\Typora\img\tyt9.png)
+   ![tyt9](https://github.com/ycv587/WxJumpHelper/blob/master/images/tyt9.png)
 
 <br>
 

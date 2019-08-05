@@ -380,8 +380,6 @@
    		if (ColorFun(xy[x][y], RGB(55, 60, 100), 10))
    			break;
    	}
-   ```
-
 
    	SetWorkingImage(NULL); // 恢复工作区
    	putimage(0, 0, &img); //贴图
@@ -415,7 +413,7 @@
    ```
 
    运行程序，如图：
-   ![tyt6](C:\Users\YANGCHEN\Documents\Typora\img\tyt6.png)
+   ![tyt6](https://github.com/ycv587/WxJumpHelper/blob/master/images/tyt6.png)
    角色自下而上进行扫描，方块自上而下进行扫描，在扫描到模型后停止扫描，故中间有一大块是无颜色填充的，这样就能更高效的定位人物和方块。
 
 <br>
@@ -514,9 +512,7 @@
    		if (ColorFun(xy[x][y], RGB(55, 60, 100), 10))
    			break;
    	}
-   ```
-
-
+	
    	SetWorkingImage(NULL); // 恢复工作区
    	putimage(0, 0, &img); //贴图
    	getchar();
